@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>部屋作成</title>
+    <link rel="stylesheet" href="/static/css/lobby.css">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+</head>
+
+<body>
+    <h1>{{username}}</h1>
+
+    <label>持ち時間:</label>
+    <input id="time" list="time_list">
+    <datalist id="time_list">
+        <option value="15分30秒">
+        <option value="10分切れ負け">
+        <option value="10秒将棋">
+    </datalist>
+
+    <button onclick="make_room()">部屋作成</button>
+    <div id="room-hub">現在部屋はありません</div>
+
+    <script>
+        const room_creater = "{{username}}";
+        const room_joiner = "{{username}}";
+    </script>
+    <script src="/static/js/lobby.js"></script>
+</body>
+
+</html>

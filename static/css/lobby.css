@@ -1,0 +1,85 @@
+/* 全体レイアウト */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(to bottom, #fdf6e3, #e0d4b0);
+    padding-top: 50px;
+}
+
+/* ユーザー名 */
+h1 {
+    font-size: 2rem;
+    color: #654321;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background: #f5deb3;
+    border: 2px solid #654321;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ラベルと入力欄 */
+label {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #333;
+}
+
+input[list] {
+    font-size: 1rem;
+    padding: 8px 10px;
+    border: 1px solid #654321;
+    border-radius: 6px;
+    outline: none;
+    width: 200px;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+}
+
+input[list]:focus {
+    border-color: #cfa14c;
+    box-shadow: 0 0 5px rgba(207, 161, 76, 0.5);
+}
+
+/* ボタン */
+button {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border: 2px solid #654321;
+    border-radius: 12px;
+    background: #f5deb3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background: #ffe4b5;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 部屋ハブ表示 */
+#room-hub {
+    width: 300px;
+    min-height: 50px;
+    padding: 15px;
+    border: 2px solid #654321;
+    border-radius: 12px;
+    background: #f5deb3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #333;
+    font-size: 1rem;
+}

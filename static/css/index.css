@@ -1,0 +1,72 @@
+/* 全体の背景とレイアウト */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(to bottom, #fdf6e3, #e0d4b0);
+}
+
+/* アラートメッセージ */
+#alert {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ラベルと入力欄 */
+label {
+    font-size: 1rem;
+    margin-right: 10px;
+    color: #333;
+}
+
+input {
+    font-size: 1rem;
+    padding: 8px 10px;
+    margin: 8px 0;
+    border: 1px solid #654321;
+    border-radius: 6px;
+    outline: none;
+    width: 200px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    border-color: #cfa14c;
+    box-shadow: 0 0 5px rgba(207, 161, 76, 0.5);
+}
+
+/* ボタン */
+button {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    margin-top: 15px;
+    border: 2px solid #654321;
+    border-radius: 12px;
+    background: #f5deb3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background: #ffe4b5;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 入力フォームをまとめる */
+label,
+input {
+    display: inline-block;
+    vertical-align: middle;
+}
