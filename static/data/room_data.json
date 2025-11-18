@@ -97,5 +97,14 @@
         "join": true,
         "sfen": "lnsgkgsnl/1r5b1/p1pppp1pp/1p4p2/9/2P6/PPSPPPPPP/1B5R1/LN1GKGSNL w - 6",
         "inital_turn": "black"
+    },
+    "11": {
+        "room_number": "11",
+        "room_creater": "nakagawa",
+        "room_joiner": null,
+        "time": "",
+        "join": true,
+        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
+        "inital_turn": "black"
     }
 }
