@@ -2,3 +2,5 @@ note.txt
 .venv/
 __pycache__/
 .vscode/
+pb_data/
+pb_migrations/
