@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 from flask_socketio import SocketIO, join_room, leave_room, emit
 import json
 import shogi
-import requests
 
 app = Flask(__name__)
 socketio = SocketIO(app)
@@ -12,6 +11,34 @@ user_sid_dict = {}
 
 # オンライン対戦部屋管理
 room_dict = {}
+
+
+# room_data.jsonに部屋情報を保存する関数
+# 将来的にはsfen引数を追加して、初期局面を部屋作成時に編集できる機能を追加したい
+def save_room_data(filename, room_creater, time):
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        data = {}
+
+    # 新しいIDを連番で付ける
+    new_id = str(len(data))
+
+    # 新しい部屋情報を追加
+    data[new_id] = {
+        "room_number": str(len(data)),
+        "room_creater": room_creater,
+        "room_joiner": None,
+        "time": time,
+        "join": True,
+        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
+        "inital_turn": "black",
+    }
+
+    # JSONファイルに書き込む
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
 
 
 # 局面情報(sfen)を更新する関数
@@ -91,7 +118,11 @@ def game_start():
     user_sid_dict.pop(room_creater, None)
     print(user_sid_dict)
     return render_template(
-        "game.html", username=room_creater, time=time, room_number=room_number, turn="black"
+        "game.html",
+        username=room_creater,
+        time=time,
+        room_number=room_number,
+        turn="black",
     )
 
 
@@ -110,17 +141,8 @@ def register(data):
 
 @socketio.on("make_room")
 def add_room(data):
-    print("test")
     room_creater, time = data.get("room_creater"), data.get("time")
-    # 部屋管理データベースの更新
-    # 将来的には指定局面なども可能にしたい
-    url = "http://127.0.0.1:8090/api/collections/pbc_3085411453/records"
-    data = {
-        "joinable": True,
-        "black": room_creater,
-        "time": time
-    }
-    requests.post(url, json=data)
+    save_room_data("static/data/room_data.json", room_creater, time)
     socketio.emit("room_list_make", {"room_creater": room_creater})
 
 
@@ -143,6 +165,14 @@ def get_enter(data):
     room_creater_sid = user_sid_dict[room_creater]
     joiner = data.get("my_name")
     time, room_number = data.get("time"), data.get("room_number")
+    # room_dataの更新処理
+    filename = "static/data/room_data.json"
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            room_datas = json.load(f)
+            room_datas[str(room_number)]["join"] = False
+    except FileNotFoundError:
+        room_datas = {}
     # wait.htmlに入室通知を送信
     emit(
         "get_entered",

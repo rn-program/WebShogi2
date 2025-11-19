@@ -11,100 +11,10 @@
     "1": {
         "room_number": "1",
         "room_creater": "nakagawa",
-        "room_joiner": null,
-        "time": "",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
-        "inital_turn": "black"
-    },
-    "2": {
-        "room_number": "2",
-        "room_creater": "nakagawa",
         "room_joiner": "ryoko",
         "time": "",
         "join": true,
         "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL w - 2",
-        "inital_turn": "black"
-    },
-    "3": {
-        "room_number": "3",
-        "room_creater": "nakagawa",
-        "room_joiner": "ryoko",
-        "time": "15分30秒",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL w - 2",
-        "inital_turn": "black"
-    },
-    "4": {
-        "room_number": "4",
-        "room_creater": "ryoko",
-        "room_joiner": "nakagawa",
-        "time": "",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL w - 2",
-        "inital_turn": "black"
-    },
-    "5": {
-        "room_number": "5",
-        "room_creater": "nakagawa",
-        "room_joiner": "ryoko",
-        "time": "15分30秒",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/p1pppp1pp/6p2/1p7/2P6/PPBPPPPPP/2S4R1/LN1GKGSNL b - 7",
-        "inital_turn": "black"
-    },
-    "6": {
-        "room_number": "6",
-        "room_creater": "nakagawa",
-        "room_joiner": "ryoko",
-        "time": "15分30秒",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/p1ppppppp/1p7/9/2P6/PP1PPPPPP/1B5R1/LNSGKGSNL b - 3",
-        "inital_turn": "black"
-    },
-    "7": {
-        "room_number": "7",
-        "room_creater": "ryoko",
-        "room_joiner": "nakagawa",
-        "time": "",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
-        "inital_turn": "black"
-    },
-    "8": {
-        "room_number": "8",
-        "room_creater": "nakagawa",
-        "room_joiner": "ryoko",
-        "time": "",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
-        "inital_turn": "black"
-    },
-    "9": {
-        "room_number": "9",
-        "room_creater": "nakagawa",
-        "room_joiner": null,
-        "time": "",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
-        "inital_turn": "black"
-    },
-    "10": {
-        "room_number": "10",
-        "room_creater": "ryoko",
-        "room_joiner": "nakagawa",
-        "time": "10分切れ負け",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/p1pppp1pp/1p4p2/9/2P6/PPSPPPPPP/1B5R1/LN1GKGSNL w - 6",
-        "inital_turn": "black"
-    },
-    "11": {
-        "room_number": "11",
-        "room_creater": "nakagawa",
-        "room_joiner": null,
-        "time": "",
-        "join": true,
-        "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
         "inital_turn": "black"
     }
 }
